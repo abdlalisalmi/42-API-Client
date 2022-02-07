@@ -6,4 +6,18 @@ REDIRECT_URI = "http://localhost:8000"
 
 app = Authenticator(UID, SECRET, REDIRECT_URI)
 
-app.getAccessToken("4fb330de16bc1824d33f5c79c96c0e1c6bc285df4adce97c4b7b6508e83de1d8")
+token = app.get_Access_token(
+        "e3aa00607eda684c5b3722856c52f714c9896c7e94d3c9c81123b39cbd764ce7")
+isValid = app.is_valid_token("c7572b89d479c4ea3cd9b5de11540c3f54be8b861d75610fe65084697c26b284")
+print(isValid)
+
+test = {
+    'access_token':
+    'c7572b89d479c4ea3cd9b5de11540c3f54be8b861d75610fe65084697c26b284',
+    'token_type': 'bearer',
+    'expires_in': 7200,
+    'refresh_token':
+    '6132a231350122da051f0a09c5c7598040f40751f56952cad96077b70156ba5b',
+    'scope': 'public',
+    'created_at': 1644261471
+}
